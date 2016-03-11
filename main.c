@@ -80,6 +80,13 @@ int main(){
 				
 			case 5:
 				printf("\nGet Maximum Skew of N\n");
+				printf("\nEnter genome string: ");
+				scanf("%s", str1);
+				printf("Enter number: ");
+				scanf("%d", &n);
+				//return value of function getMaxSkewN stored in result
+				result = getMaxSkewN(str1, n);
+				printf("\nMaximum Skew: %d\n", result);
 				break;
 				
 			case 6:
