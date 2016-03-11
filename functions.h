@@ -43,31 +43,51 @@ int getHammingDistance(char *str1, char *str2){
 	Given an original string and a pattern, we will count the number of
 	occurrence of pattern in original.
 -----------------------------------------------------------------------------*/
-int countSubstrPattern(char *str1, char *str2){
-	int strlen1, strlen2, occurence = 0, i, j = 0, k, check = 0;
+int countSubstrPattern(char *original, char *pattern){
+	int originalLen, patternLen, occurence = 0, i, j, k, check = 0;
 	
-	strlen1 = strlen(str1);
-	strlen2 = strlen(str2);
+	originalLen = strlen(original);
+	patternLen = strlen(pattern);
 	
-	for(i=0; i<strlen1; i++){	//traverses every character in the original string
+	for(i=0; i<originalLen; i++){ //traverses every character in the original string
 		k = i;	//k is a temporary variable for storing the index of i
-		while(j < strlen2){	//loops through the pattern
+		for(j=0; j<patternLen;j++){	//loops through the pattern
 			//if the ith character of the original string is equal to the ith
 			//character of the pattern
-			if(str1[k] == str2[j]){
+			if(original[k] == pattern[j]){
 				k++;
 				check++;
 			}
-			j++;
 		}
 		
-		if(check == strlen2){	//if check is equal to the length of the pattern
+		if(check == patternLen){	//if check is equal to the length of the pattern
 			occurence++;	//a substring is found
 		}
 		
-		//reinitialize to zero for next character in original string
-		check = 0;
-		j = 0;
+		check = 0; //reinitialize to zero for next character in original string
 	}
 	return occurence;
+}
+
+/*-----------------------------------------------------------------------------
+	Given an alphabet string where all letters are assumed to be unique, this
+	function returns true if the string str is a valid string based on the
+	letters of alphabet.
+-----------------------------------------------------------------------------*/
+int isValidString(char *str, char *alphabet){
+	int strLen, valid = 0, i;
+	
+	strLen = strlen(str);
+	
+	for(i=0; i<strLen; i++){	//loops through every character of string
+		if(strchr(alphabet, str[i]) != NULL){	//if character found in alphabet
+			valid++;
+		}
+	}
+	
+	if(valid == strLen){	//if valid is equal to the length of string
+		return 1;
+	}else{
+		return 0;
+	}
 }

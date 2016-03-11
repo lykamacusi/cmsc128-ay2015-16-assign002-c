@@ -52,6 +52,19 @@ int main(){
 				
 			case 3:
 				printf("\nIs String Valid\n");
+				printf("\nEnter alphabet: ");
+				scanf("%s", str1);
+				printf("Enter string: ");
+				scanf("%s", str2);
+				//return value of function isValidString stored in result
+				result = isValidString(str2, str1);
+				
+				if(result == 1){
+					printf("\nString is valid.\n");
+				}else{
+					printf("\nString is not valid.\n");
+				}
+				
 				break;
 				
 			case 4:
