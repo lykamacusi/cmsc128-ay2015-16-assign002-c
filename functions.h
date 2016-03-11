@@ -80,7 +80,7 @@ int isValidString(char *str, char *alphabet){
 	strLen = strlen(str);
 	
 	for(i=0; i<strLen; i++){	//loops through every character of string
-		if(strchr(alphabet, str[i]) != NULL){	//if character found in alphabet
+		if(strchr(alphabet, str[i]) != NULL){ //if character found in alphabet
 			valid++;
 		}
 	}
@@ -90,4 +90,38 @@ int isValidString(char *str, char *alphabet){
 	}else{
 		return 0;
 	}
+}
+
+/*-----------------------------------------------------------------------------
+	Given a genome str of some length q (where q>0), it returns the number of
+	Gs minus the number of Cs in the first n nucleotides (q>=n). The value can
+	be zero, negative or positive. The first position is one (1) not zero(0) as
+	we typically associate with string implementations.
+-----------------------------------------------------------------------------*/
+int getSkew(char *str, int n){
+	int tempLen, i, G=0, C=0, value;
+	char *temp;
+	
+	temp = (char *)malloc(100*sizeof(char));	//temporary storage of string
+	strcpy(temp, "X");	//add dummy character to temp
+	strcat(temp, str);	//concatenate genome string
+	
+	tempLen = strlen(temp);
+	
+	//if the input number is less than or equal to the length of the temporary
+	//string
+	if(n <= tempLen){
+		//traverses characters with index less than or equal to n
+		for(i=1; i<=n; i++){
+			if(temp[i] == 'G'){
+				G++;
+			}
+			if(temp[i] == 'C'){
+				C++;
+			}
+		}
+	}
+	
+	value = G - C;
+	return value;
 }

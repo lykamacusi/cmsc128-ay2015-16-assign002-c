@@ -11,7 +11,7 @@
 #include "functions.h"
 
 int main(){
-	int choice = 7, result;
+	int choice = 7, result, n;
 	char *str1, *str2;
 	
 	while(choice != 0){	//while user has not chosen to exit the program
@@ -69,6 +69,13 @@ int main(){
 				
 			case 4:
 				printf("\nGet Skew\n");
+				printf("\nEnter genome string: ");
+				scanf("%s", str1);
+				printf("Enter number: ");
+				scanf("%d", &n);
+				//return value of function getSkew stored in result
+				result = getSkew(str1, n);
+				printf("\nNumber of G-C: %d\n", result);
 				break;
 				
 			case 5:
