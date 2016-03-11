@@ -14,8 +14,8 @@ int main(){
 	int choice = 7, result;
 	char *str1, *str2;
 	
-	while(choice != 0){
-		printMenu(&choice);
+	while(choice != 0){	//while user has not chosen to exit the program
+		printMenu(&choice);	//calls function printMenu
 		
 		str1 = (char *)malloc(sizeof(char));
 		str2 = (char *)malloc(sizeof(char));
@@ -27,12 +27,13 @@ int main(){
 				scanf("%s", str1);
 				printf("Enter string 2: ");
 				scanf("%s", str2);
+				//return value of function getHammingDistance stored in result
 				result = getHammingDistance(str1, str2);
 				
-				if(result == 0){
+				if(result == 0){	//if the strings have unequal length
 					printf("\nError! Strings have unequal length!\n");
 					
-				}else{
+				}else{	//if the strings have equal length
 					printf("\nHamming Distance: %d\n", result);
 				}
 				

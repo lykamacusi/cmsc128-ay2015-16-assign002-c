@@ -25,15 +25,16 @@ int getHammingDistance(char *str1, char *str2){
 	strlen1 = strlen(str1);
 	strlen2 = strlen(str2);
 	
-	if(strlen1 == strlen2){
-		for(i=0; i<strlen1; i++){
+	if(strlen1 == strlen2){	//if the strings have equal length
+		for(i=0; i<strlen1; i++){	//traverses every character in the string
+			//if the characters in the same position are not the same
 			if(str1[i] != str2[i]){
 				hammingDistance++;
 			}
 		}
 		return hammingDistance;
 		
-	}else{
+	}else{	//if the strings have unequal length
 		return 0;
 	}
 }
