@@ -17,8 +17,8 @@ int main(){
 	while(choice != 0){	//while user has not chosen to exit the program
 		printMenu(&choice);	//calls function printMenu
 		
-		str1 = (char *)malloc(sizeof(char));
-		str2 = (char *)malloc(sizeof(char));
+		str1 = (char *)malloc(100*sizeof(char));
+		str2 = (char *)malloc(100*sizeof(char));
 		
 		switch(choice){
 			case 1:
@@ -41,6 +41,13 @@ int main(){
 				
 			case 2:
 				printf("\nCount Substring Pattern\n");
+				printf("\nEnter original string: ");
+				scanf("%s", str1);
+				printf("Enter pattern: ");
+				scanf("%s", str2);
+				//return value of function countSubstrPattern stored in result
+				result = countSubstrPattern(str1, str2);
+				printf("\nNumber of occurence of pattern in orginal: %d\n", result);
 				break;
 				
 			case 3:
