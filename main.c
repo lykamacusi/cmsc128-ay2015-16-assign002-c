@@ -22,7 +22,10 @@ int main(){
 		
 		switch(choice){
 			case 1:
-				printf("\nGet Hamming Distance\n");
+				printf("\n*****************************************\n");
+				printf("*\t   Get Hamming Distance\t\t*\n");
+				printf("*****************************************\n");
+				
 				printf("\nEnter string 1: ");
 				scanf("%s", str1);
 				printf("Enter string 2: ");
@@ -40,7 +43,10 @@ int main(){
 				break;
 				
 			case 2:
-				printf("\nCount Substring Pattern\n");
+				printf("\n*****************************************\n");
+				printf("*\t Count Substring Pattern\t*\n");
+				printf("*****************************************\n");
+				
 				printf("\nEnter original string: ");
 				scanf("%s", str1);
 				printf("Enter pattern: ");
@@ -51,7 +57,10 @@ int main(){
 				break;
 				
 			case 3:
-				printf("\nIs String Valid\n");
+				printf("\n*****************************************\n");
+				printf("*\t    Is String Valid\t\t*\n");
+				printf("*****************************************\n");
+				
 				printf("\nEnter alphabet: ");
 				scanf("%s", str1);
 				printf("Enter string: ");
@@ -68,7 +77,10 @@ int main(){
 				break;
 				
 			case 4:
-				printf("\nGet Skew\n");
+				printf("\n*****************************************\n");
+				printf("*\t\tGet Skew\t\t*\n");
+				printf("*****************************************\n");
+				
 				printf("\nEnter genome string: ");
 				scanf("%s", str1);
 				printf("Enter number: ");
@@ -85,7 +97,10 @@ int main(){
 				break;
 				
 			case 5:
-				printf("\nGet Maximum Skew of N\n");
+				printf("\n*****************************************\n");
+				printf("*\t  Get Maximum Skew of N\t\t*\n");
+				printf("*****************************************\n");
+				
 				printf("\nEnter genome string: ");
 				scanf("%s", str1);
 				printf("Enter number: ");
@@ -102,7 +117,10 @@ int main(){
 				break;
 				
 			case 6:
-				printf("\nGet Minimum Skew of N\n");
+				printf("\n*****************************************\n");
+				printf("*\t  Get Minimum Skew of N\t\t*\n");
+				printf("*****************************************\n");
+				
 				printf("\nEnter genome string: ");
 				scanf("%s", str1);
 				printf("Enter number: ");

@@ -1,12 +1,14 @@
 void printMenu(int *choice){
-	printf("\nMENU\n");
-	printf("[1] Get Hamming Distance\n");
-	printf("[2] Count Substring Pattern\n");
-	printf("[3] Is String Valid\n");
-	printf("[4] Get Skew\n");
-	printf("[5] Get Maximum Skew of N\n");
-	printf("[6] Get Minimum Skew of N\n");
-	printf("[0] Exit\n");
+	printf("\n*****************************************\n");
+	printf("*\t\tMENU\t\t\t*\n");
+	printf("*\t[1] Get Hamming Distance\t*\n");
+	printf("*\t[2] Count Substring Pattern\t*\n");
+	printf("*\t[3] Is String Valid\t\t*\n");
+	printf("*\t[4] Get Skew\t\t\t*\n");
+	printf("*\t[5] Get Maximum Skew of N\t*\n");
+	printf("*\t[6] Get Minimum Skew of N\t*\n");
+	printf("*\t[0] Exit\t\t\t*\n");
+	printf("*****************************************\n");
 	
 	printf("\nEnter Choice: ");
 	scanf("%d", choice);
