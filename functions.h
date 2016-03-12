@@ -135,9 +135,33 @@ int getMaxSkewN(char *str, int n){
 	//traverses characters with index less than or equal to n
 	for(i=0; i<n; i++){
 		value = getSkew(str, i+1);
-		if(value > max){
-			max = value;
+		if(value > max){	//if value greater than current max
+			max = value;	//max equal to current value
 		}
 	}
 	return max;
+}
+
+/*-----------------------------------------------------------------------------
+	Given a genome str of some length q (where q>0), it returns the minimum
+	value of the number of Gs minus the number of Cs in the first n nucleotides
+	(q>=n). The value can be zero, negative or positive. The first position is
+	one (1) not zero(0) as we typically associate with string implementations.
+-----------------------------------------------------------------------------*/
+int getMinSkewN(char *str, int n){
+	int strLen, i, value = 0, min = 0;
+	
+	strLen = strlen(str);
+	
+	value = getSkew(str, 1);
+	min = value;
+	
+	//traverses characters with index less than or equal to n
+	for(i=1; i<n; i++){
+		value = getSkew(str, i+1);
+		if(value < min){	//if value less than current min
+			min = value;	//min equal to current value
+		}
+	}
+	return min;
 }

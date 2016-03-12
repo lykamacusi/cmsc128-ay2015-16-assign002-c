@@ -107,9 +107,15 @@ int main(){
 				scanf("%s", str1);
 				printf("Enter number: ");
 				scanf("%d", &n);
-				//return value of function getMinSkewN stored in result
-				//result = getMinSkewN(str1, n);
-				printf("\nMinimum Skew: %d\n", result);
+				
+				if(n > (strlen(str1)+1) || n <= 0){
+					printf("\nError! Number must be within string length!\n");
+				}else{
+					//return value of function getMinSkewN stored in result
+					result = getMinSkewN(str1, n);
+					printf("\nMinimum Skew: %d\n", result);
+				}
+				
 				break;
 				
 			case 0:
