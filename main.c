@@ -73,9 +73,15 @@ int main(){
 				scanf("%s", str1);
 				printf("Enter number: ");
 				scanf("%d", &n);
-				//return value of function getSkew stored in result
-				result = getSkew(str1, n);
-				printf("\nNumber of G-C: %d\n", result);
+				
+				if(n > (strlen(str1)+1) || n <= 0){
+					printf("\nError! Number must be within string length!\n");
+				}else{
+					//return value of function getSkew stored in result
+					result = getSkew(str1, n);
+					printf("\nNumber of G-C: %d\n", result);
+				}
+				
 				break;
 				
 			case 5:
@@ -84,13 +90,26 @@ int main(){
 				scanf("%s", str1);
 				printf("Enter number: ");
 				scanf("%d", &n);
-				//return value of function getMaxSkewN stored in result
-				result = getMaxSkewN(str1, n);
-				printf("\nMaximum Skew: %d\n", result);
+				
+				if(n > (strlen(str1)+1) || n <= 0){
+					printf("\nError! Number must be within string length!\n");
+				}else{
+					//return value of function getMaxSkewN stored in result
+					result = getMaxSkewN(str1, n);
+					printf("\nMaximum Skew: %d\n", result);
+				}
+				
 				break;
 				
 			case 6:
 				printf("\nGet Minimum Skew of N\n");
+				printf("\nEnter genome string: ");
+				scanf("%s", str1);
+				printf("Enter number: ");
+				scanf("%d", &n);
+				//return value of function getMinSkewN stored in result
+				//result = getMinSkewN(str1, n);
+				printf("\nMinimum Skew: %d\n", result);
 				break;
 				
 			case 0:
